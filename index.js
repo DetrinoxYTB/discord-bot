@@ -3,7 +3,6 @@ const {Token} = require("./config")
 const fs = require("fs")
 const eventsFiles = fs.readdirSync("./Events").filter(file => file.endsWith(".js"))
 const commandsFiles = fs.readdirSync("./Commands").filter(file => file.endsWith(".js"))
-const buttonFiles = fs.readdirSync("./Buttons").filter(file => file.endsWith('.js'));
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -17,7 +16,6 @@ const client = new Client({
     ]
 })
 client.Commands = new Collection;
-client.Buttons = new Collection;
 client.on("ready", () =>{
     for (var file of commandsFiles){
         var command = require(`./Commands/${file}`);
