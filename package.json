@@ -1,0 +1,15 @@
+{
+  "name": "youtube",
+  "version": "1.0.0",
+  "description": "Le bot de Detrinox",
+  "main": "index.js",
+  "author": "Detrinox",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.6.0",
+    "mysql": "^2.18.1"
+  },
+  "scripts":{
+    "start": "node index.js"
+  }
+}
