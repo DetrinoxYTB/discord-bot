@@ -89,5 +89,12 @@ module.exports = {
 
             }
         }
+        //Règlement
+        if(reaction.message.id === "1042874287222173706"){
+            if(reaction.emoji.name == "✅"){
+                member.roles.add("1043628850564833300")
+
+            }
+        }
     }
 }
