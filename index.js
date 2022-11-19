@@ -1,6 +1,7 @@
 const { Client, GatewayIntentBits, InteractionType, Partials, Collection,} = require("discord.js")
 const {Token} = require("./config")
 const fs = require("fs")
+const process = require("process")
 const eventsFiles = fs.readdirSync("./Events").filter(file => file.endsWith(".js"))
 const commandsFiles = fs.readdirSync("./Commands").filter(file => file.endsWith(".js"))
 const client = new Client({
@@ -49,4 +50,4 @@ client.on("interactionCreate", interaction =>{
         }
     }
 })
-client.login(Token)
+client.login(process.env.TOKEN)
